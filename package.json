@@ -1,6 +1,8 @@
 {
   "name": "mcp-fetch-server",
   "version": "1.0.0",
+  "description": "MCP server for Claude fetch",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js"
