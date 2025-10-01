@@ -1,4 +1,4 @@
-import fetchHandler from "./src/index.js"; // Adjust path if needed
+import fetchHandler from "./index.js"; // Adjust path if needed
 
 export default async function handler(req, res) {
   try {
