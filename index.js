@@ -1,5 +1,7 @@
-import { MCPServer } from "@modelcontextprotocol/sdk";
-import handler from "./dist/index.js"; // compiled TypeScript handler
+import { MCPServer } from "@modelcontextprotocol/typescript-sdk";
+import fetchHandler from "./src/index.js"; 
+
+new MCPServer(fetchHandler).start();
 
 const port = process.env.PORT || 3000;
 
