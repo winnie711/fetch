@@ -1,7 +1,5 @@
 import { MCPServer } from "@modelcontextprotocol/typescript-sdk";
-import fetchHandler from "./src/index.js"; 
-
-new MCPServer(fetchHandler).start();
+import fetchHandler from "./src/index.js"; // Adjust if your handler path is different
 
 const port = process.env.PORT || 3000;
 
@@ -9,7 +7,7 @@ async function startServer() {
   const server = new MCPServer({
     port,
     handlers: {
-      fetch: handler
+      fetch: fetchHandler
     }
   });
 
@@ -18,6 +16,6 @@ async function startServer() {
 }
 
 startServer().catch(err => {
-  console.error(err);
+  console.error("Server failed to start:", err);
   process.exit(1);
 });
